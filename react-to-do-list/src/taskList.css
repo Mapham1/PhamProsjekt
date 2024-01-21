@@ -54,12 +54,12 @@ li {
 }
 
 .delete-btn {
-    background-color: rgb(137, 32, 32);
+    background-color: rgb(201, 81, 81);
     margin: 6px;
 }
 
 .toggle-btn {
-    background-color: green;
+    background-color: rgb(75, 214, 75);
 }
 
 h3 {
