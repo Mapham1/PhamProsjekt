@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './taskList.css';
+import './app.css';
 
 const TaskList = () => {
   // State-variabler for å håndtere oppgavelisten, fullførte oppgaver og inntastet oppgavetekst
@@ -75,6 +75,7 @@ const TaskList = () => {
         {tasks.map((task, index) => (
           <li key={index} className={task.completed ? 'completed' : ''}>
             {task.text}
+            <br />
             <button onClick={() => deleteTask(index)} className="delete-btn">
               Slett
             </button>
