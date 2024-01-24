@@ -1,4 +1,5 @@
-![image](https://github.com/Mapham1/PhamProsjekt/assets/31647379/695596a6-d2eb-45bc-9996-060c00911c0e)
+![image](https://github.com/Mapham1/PhamProsjekt/assets/31647379/3f3298ca-73fa-408a-ac37-861eac781391)
+
 
 
 Du må ha dette installert:
