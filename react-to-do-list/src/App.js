@@ -4,25 +4,21 @@ import './app.css';
 const TaskList = () => {
   // State-variabler for å håndtere oppgavelisten, fullførte oppgaver og inntastet oppgavetekst
 
-  //tasks: A list to store current tasks.
-  // completedTasks: A list to store completed tasks.
-  // taskInput: A string to store the value of the input field for adding new tasks
-
-  const [tasks, setTasks] = useState([]);
-  const [completedTasks, setCompletedTasks] = useState([]);
-  const [taskInput, setTaskInput] = useState('');
+  const [tasks, setTasks] = useState([]); // tasks: En liste for å lagre oppgavene 
+  const [completedTasks, setCompletedTasks] = useState([]); // completedTasks: En liste for å lagre gjennomførte oppgaver
+  const [taskInput, setTaskInput] = useState('');  // taskInput: En string for å lagre verdien av input fielden for å legge til nye oppgaver.
 
   // Funksjon for å legge til en ny oppgave i oppgavelisten
   const addTask = (taskText) => {
     setTasks([...tasks, { text: taskText, completed: false }]);
-    setTaskInput('');
+    setTaskInput(''); //Nullstill inntastet oppgavetekst
   };
 
 
   // Funksjon for å slette en oppgave fra oppgavelisten
   const deleteTask = (index) => {
     const newTasks = [...tasks];
-    newTasks.splice(index, 1);
+    newTasks.splice(index, 2);
     setTasks(newTasks);
   };
 
