@@ -68,20 +68,20 @@ const TaskList = () => {
           placeholder="Skriv oppgaven"
           required
         />
-        <button type="submit">Legg til</button>
+       <button type="submit" className="add-task-button">Legg til</button>
       </form>
       {/* Liste over ufullførte oppgaver */}
       <h3>Ugjennomførte oppgaver:</h3>
       <ul>
         {tasks.map((task, index) => (
-          <li key={index} className={task.completed ? 'completed' : ''}>
+         <li key={index} className={`uncompleted-task ${task.completed ? 'completed' : ''}`}>
             {task.text}
             <br />
             <button onClick={() => deleteTask(index)} className="delete-btn">
               Slett
             </button>
             {!task.completed && (
-              <button onClick={() => toggleComplete(index)} className="toggle-btn">
+              <button onClick={() => toggleComplete(index)} className="toggle-btn-complete">
                 Fullført
               </button>
             )}
@@ -95,7 +95,7 @@ const TaskList = () => {
           {completedTasks.map((task, index) => (
             <li key={index} className="completed-task">
               {task.text}
-              <button onClick={() => deleteCompletedTask(index)} className="delete-btn">
+              <button onClick={() => deleteCompletedTask(index)} className="delete-btn-completed">
                 Slett
               </button>
             </li>
