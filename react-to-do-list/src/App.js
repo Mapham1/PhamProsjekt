@@ -3,17 +3,22 @@ import './app.css';
 
 const TaskList = () => {
   // State-variabler for å håndtere oppgavelisten, fullførte oppgaver og inntastet oppgavetekst
+
+  //tasks: A list to store current tasks.
+  // completedTasks: A list to store completed tasks.
+  // taskInput: A string to store the value of the input field for adding new tasks
+
   const [tasks, setTasks] = useState([]);
   const [completedTasks, setCompletedTasks] = useState([]);
   const [taskInput, setTaskInput] = useState('');
 
-   // Funksjon for å legge til en ny oppgave i oppgavelisten
+  // Funksjon for å legge til en ny oppgave i oppgavelisten
   const addTask = (taskText) => {
     setTasks([...tasks, { text: taskText, completed: false }]);
     setTaskInput('');
   };
 
-  
+
   // Funksjon for å slette en oppgave fra oppgavelisten
   const deleteTask = (index) => {
     const newTasks = [...tasks];
@@ -22,7 +27,7 @@ const TaskList = () => {
   };
 
 
-   // Funksjon for å slette en fullført oppgave fra listen over fullførte oppgaver
+  // Funksjon for å slette en fullført oppgave fra listen over fullførte oppgaver
   const deleteCompletedTask = (index) => {
     const newCompletedTasks = [...completedTasks];
     newCompletedTasks.splice(index, 1);
@@ -30,7 +35,7 @@ const TaskList = () => {
   };
 
 
-   // Funksjon for å bytte status (fullført) for en oppgave
+  // Funksjon for å bytte status (fullført) for en oppgave
   const toggleComplete = (index) => {
     const newTasks = [...tasks];
     const completedTask = newTasks.splice(index, 1)[0];
@@ -38,11 +43,11 @@ const TaskList = () => {
 
     // Sjekk om oppgaven er markert som fullført
     if (completedTask.completed) {
-       // Hvis fullført, legg den til i completedTasks-arrayet
+      // Hvis fullført, legg den til i completedTasks-arrayet
       setCompletedTasks([...completedTasks, completedTask]);
-    } 
+    }
 
-     // Oppdater oppgavelisten med den modifiserte newTasks-arrayen
+    // Oppdater oppgavelisten med den modifiserte newTasks-arrayen
     setTasks(newTasks);
   };
 
@@ -51,7 +56,7 @@ const TaskList = () => {
   return (
     <div id="app">
       <h1>Gjøremål</h1>
-       {/* Skjema for å legge til nye oppgaver */}
+      {/* Skjema for å legge til nye oppgaver */}
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -69,7 +74,7 @@ const TaskList = () => {
         />
         <button type="submit">Legg til</button>
       </form>
-       {/* Liste over ufullførte oppgaver */}
+      {/* Liste over ufullførte oppgaver */}
       <h3>Ugjennomførte oppgaver:</h3>
       <ul>
         {tasks.map((task, index) => (
@@ -80,15 +85,15 @@ const TaskList = () => {
               Slett
             </button>
             {!task.completed && (
-        <button onClick={() => toggleComplete(index)} className="toggle-btn">
-          Fullført
-        </button>
-      )}
+              <button onClick={() => toggleComplete(index)} className="toggle-btn">
+                Fullført
+              </button>
+            )}
           </li>
         ))}
       </ul>
       <div>
-         {/* Liste over fullførte oppgaver */}
+        {/* Liste over fullførte oppgaver */}
         <h3>Gjennomførte oppgaver:</h3>
         <ul>
           {completedTasks.map((task, index) => (
