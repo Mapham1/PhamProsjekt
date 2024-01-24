@@ -1,4 +1,7 @@
-![image](https://github.com/Mapham1/PhamProsjekt/assets/31647379/326761fd-1972-4bcb-892a-b4f25e583b4e)
+![image](https://github.com/Mapham1/PhamProsjekt/assets/31647379/f90728d9-e7ff-4ac9-b41b-86af9578f8cc)
+
+
+
 
 Du må ha dette installert:
 - Node.js
