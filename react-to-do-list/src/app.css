@@ -58,6 +58,7 @@ label {
 li {
     margin-bottom: 4px;
     margin-left: -25px;
+    list-style-type: none;
 }
 
 /* Få en annen farge på ugjennomførte oppgaver */
