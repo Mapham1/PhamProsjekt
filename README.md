@@ -1,4 +1,6 @@
-![image](https://github.com/Mapham1/PhamProsjekt/assets/31647379/f90728d9-e7ff-4ac9-b41b-86af9578f8cc)
+![image](https://github.com/Mapham1/PhamProsjekt/assets/31647379/a299ff5c-4159-43d1-8658-b18991af1096)
+
+
 
 
 
