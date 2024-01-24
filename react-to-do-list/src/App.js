@@ -18,7 +18,7 @@ const TaskList = () => {
   // Funksjon for å slette en oppgave fra oppgavelisten
   const deleteTask = (index) => {
     const newTasks = [...tasks];
-    newTasks.splice(index, 2);
+    newTasks.splice(index, 1);
     setTasks(newTasks);
   };
 
