@@ -54,11 +54,12 @@ label {
 }
 
 
-/* Plassere liste av oppgavene litt mer til venstre */
+/* Generell styling på oppgavene som blir vist */
 li {
-    margin-bottom: 4px;
-    margin-left: -25px;
-    list-style-type: none;
+    margin-bottom: 4px; /* Plassere liste av oppgavene litt mer til venstre */
+    margin-left: -25px; /* Plassere liste av oppgavene litt mer til venstre */
+    list-style-type: none; /* Fjerner dott i listingen */
+    font-weight: bold; /* Fet skrift på oppgavene */
 }
 
 /* Få en annen farge på ugjennomførte oppgaver */
